@@ -14,6 +14,8 @@ class ContactPage extends StatelessWidget {
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _messageController = TextEditingController();
 
+  ContactPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -453,7 +455,7 @@ class ContactPage extends StatelessWidget {
   }
 
   void _launchTikTok() async {
-    const url = 'https://tiktok.com/@bellabeautysalon';
+    const url = 'https://tiktok.com/@salonbeautyvibes';
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(Uri.parse(url));
     }

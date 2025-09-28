@@ -9,6 +9,8 @@ import '../../../core/theme/app_theme.dart';
 import '../../../core/constants/app_constants.dart';
 
 class ServicesPage extends GetView<ServicesController> {
+  const ServicesPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -116,7 +118,7 @@ class ServicesPage extends GetView<ServicesController> {
       elevation: 6,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Container(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(
@@ -290,7 +292,7 @@ class ServicesPage extends GetView<ServicesController> {
       elevation: 8,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Container(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(

@@ -1,6 +1,6 @@
 class AppConstants {
   // Business Information
-  static const String businessName = 'Bella Beauty Salon';
+  static const String businessName = 'Salon Beauty Vibes';
   static const String tagline = 'Kecantikan & Perawatan Terpadu';
   static const String description =
       'Salon kecantikan premium dengan layanan terlengkap untuk memanjakan diri Anda';
@@ -8,9 +8,9 @@ class AppConstants {
   // Contact Information
   static const String phoneNumber = '+62 812-3456-7890';
   static const String whatsappNumber = '+62 812-3456-7890';
-  static const String email = 'info@bellabeautysalon.com';
+  static const String email = 'info@salonbeautyvibes.com';
   static const String phone = '085333242342';
-  static const String instagram = '@bellabeautysalon';
+  static const String instagram = '@salonbeautyvibes';
   static const String address =
       'Jl. Sudirman No. 123, Jakarta Pusat, DKI Jakarta 10220';
 

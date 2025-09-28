@@ -29,12 +29,6 @@ class HomeController extends GetxController {
   // Featured services
   List<String> featuredServices = ['haircut', 'makeup', 'skincare'];
 
-  @override
-  void onInit() {
-    super.onInit();
-    // Initialize any required data
-  }
-
   void navigateToService(String serviceId) {
     Get.toNamed('/layanan', arguments: serviceId);
   }

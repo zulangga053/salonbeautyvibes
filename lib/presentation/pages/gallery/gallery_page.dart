@@ -24,6 +24,8 @@ class GalleryPage extends StatelessWidget {
     // Add more gallery items
   ];
 
+  GalleryPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

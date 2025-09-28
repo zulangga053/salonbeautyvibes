@@ -5,6 +5,8 @@ import '../../../core/theme/app_theme.dart';
 import '../../../core/constants/app_constants.dart';
 
 class Footer extends StatelessWidget {
+  const Footer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -146,53 +148,6 @@ class Footer extends StatelessWidget {
         _buildSocialMedia(),
       ],
     );
-  }
-
-  List<Widget> _buildQuickLinks() {
-    final links = [
-      {'title': 'Beranda', 'route': '/'},
-      {'title': 'Tentang Kami', 'route': '/tentang-kami'},
-      {'title': 'Layanan', 'route': '/layanan'},
-      {'title': 'Galeri', 'route': '/galeri'},
-      {'title': 'Kontak', 'route': '/kontak'},
-    ];
-
-    return links
-        .map(
-          (link) => GestureDetector(
-            onTap: () => Get.toNamed(link['route']!),
-            child: Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Text(
-                link['title']!,
-                style: Get.textTheme.bodyMedium?.copyWith(
-                  color: Colors.white.withOpacity(0.8),
-                ),
-              ),
-            ),
-          ),
-        )
-        .toList();
-  }
-
-  List<Widget> _buildServiceLinks() {
-    return AppConstants.services
-        .take(5)
-        .map(
-          (service) => GestureDetector(
-            onTap: () => Get.toNamed('/layanan'),
-            child: Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Text(
-                service['name'],
-                style: Get.textTheme.bodyMedium?.copyWith(
-                  color: Colors.white.withOpacity(0.8),
-                ),
-              ),
-            ),
-          ),
-        )
-        .toList();
   }
 
   Widget _buildContactItem(IconData icon, String text) {

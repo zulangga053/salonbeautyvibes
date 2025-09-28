@@ -8,6 +8,8 @@ import '../../../core/theme/app_theme.dart';
 import '../../../core/constants/app_constants.dart';
 
 class AboutPage extends StatelessWidget {
+  const AboutPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,7 +100,7 @@ class AboutPage extends StatelessWidget {
                   Text('Cerita Kami', style: Get.textTheme.headlineMedium),
                   const SizedBox(height: 24),
                   Text(
-                    'Bella Beauty Salon dimulai dari impian sederhana untuk memberikan pengalaman kecantikan yang tak terlupakan. Didirikan pada tahun 2014, kami telah melayani ribuan pelanggan dengan dedikasi tinggi.',
+                    'Salon Beauty Vibes dimulai dari impian sederhana untuk memberikan pengalaman kecantikan yang tak terlupakan. Didirikan pada tahun 2025, kami telah melayani ribuan pelanggan dengan dedikasi tinggi.',
                     style: Get.textTheme.bodyLarge,
                   ),
                   const SizedBox(height: 16),

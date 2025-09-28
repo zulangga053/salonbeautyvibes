@@ -13,10 +13,12 @@ void main() async {
 }
 
 class BellaBeautySalonApp extends StatelessWidget {
+  const BellaBeautySalonApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Bella Beauty Salon - Kecantikan & Perawatan Terpadu',
+      title: 'Salon Beauty Vibes - Kecantikan & Perawatan Terpadu',
       theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.home,

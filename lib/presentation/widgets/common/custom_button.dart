@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../../../core/theme/app_theme.dart';
 
 class CustomButton extends StatelessWidget {
@@ -15,7 +14,7 @@ class CustomButton extends StatelessWidget {
   final Widget? icon;
 
   const CustomButton({
-    Key? key,
+    super.key,
     required this.text,
     this.onPressed,
     this.isOutlined = false,
@@ -26,7 +25,7 @@ class CustomButton extends StatelessWidget {
     this.width,
     this.borderRadius = 12,
     this.icon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

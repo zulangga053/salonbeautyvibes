@@ -28,6 +28,8 @@ class PromotionsSection extends StatelessWidget {
     },
   ];
 
+  PromotionsSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -73,7 +75,7 @@ class PromotionsSection extends StatelessWidget {
       elevation: 8,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Container(
-        height: 200,
+        height: 230,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(
@@ -151,7 +153,7 @@ class PromotionsSection extends StatelessWidget {
                         color: AppColors.textSecondary,
                       ),
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 12),
 
                     // CTA Button
                     CustomButton(

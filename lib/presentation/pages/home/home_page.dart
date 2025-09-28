@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:salonbeautyvibes/presentation/controllers/home_controller.dart';
 
 import '../../../core/theme/app_theme.dart';
@@ -55,7 +54,7 @@ class HomePage extends GetView<HomeController> {
       child: Column(
         children: [
           Text(
-            'Tentang Bella Beauty Salon',
+            'Tentang Salon Beauty Vibes',
             style: Get.textTheme.headlineMedium,
             textAlign: TextAlign.center,
           ),
@@ -63,7 +62,7 @@ class HomePage extends GetView<HomeController> {
           Container(
             constraints: const BoxConstraints(maxWidth: 800),
             child: Text(
-              'Dengan pengalaman lebih dari 10 tahun, Bella Beauty Salon telah menjadi destinasi utama untuk perawatan kecantikan di Jakarta. Kami menghadirkan layanan terlengkap dengan tenaga ahli berpengalaman dan produk berkualitas premium.',
+              'Dengan pengalaman lebih dari 10 tahun, Salon Beauty Vibes telah menjadi destinasi utama untuk perawatan kecantikan di Jakarta. Kami menghadirkan layanan terlengkap dengan tenaga ahli berpengalaman dan produk berkualitas premium.',
               style: Get.textTheme.bodyLarge,
               textAlign: TextAlign.center,
             ),

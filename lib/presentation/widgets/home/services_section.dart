@@ -6,6 +6,8 @@ import '../../../core/theme/app_theme.dart';
 import '../../../core/constants/app_constants.dart';
 
 class ServicesSection extends StatelessWidget {
+  const ServicesSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -62,7 +64,7 @@ class ServicesSection extends StatelessWidget {
             ),
           ),
 
-          const SizedBox(height: 48),
+          const SizedBox(height: 20),
           CustomButton(
             text: 'Lihat Semua Layanan',
             onPressed: () => Get.toNamed('/layanan'),

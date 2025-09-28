@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../widgets/common/custom_app_bar.dart';
-import '../../widgets/common/custom_button.dart';
 import '../../widgets/common/footer.dart';
 import '../../../core/theme/app_theme.dart';
 
@@ -28,6 +27,8 @@ class ProductsPage extends StatelessWidget {
     },
     // Add more products
   ];
+
+  ProductsPage({super.key});
 
   @override
   Widget build(BuildContext context) {

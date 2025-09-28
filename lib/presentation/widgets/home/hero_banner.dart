@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../common/custom_button.dart';
 import '../../../core/theme/app_theme.dart';
-import '../../../core/constants/app_constants.dart';
 
 class HeroBanner extends StatelessWidget {
   final List<Map<String, String>> bannerSlides = [
@@ -27,9 +26,11 @@ class HeroBanner extends StatelessWidget {
     },
   ];
 
+  HeroBanner({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: Get.height * 0.8,
       child: CarouselSlider.builder(
         itemCount: bannerSlides.length,

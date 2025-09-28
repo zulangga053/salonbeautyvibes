@@ -10,7 +10,7 @@ class TestimonialsSection extends StatelessWidget {
       'service': 'Paket Wedding',
       'rating': 5,
       'review':
-          'Pelayanan luar biasa! Tim Bella Beauty Salon sangat profesional dan hasilnya melebihi ekspektasi. Hari pernikahan saya menjadi sangat berkesan berkat mereka.',
+          'Pelayanan luar biasa! Tim Salon Beauty Vibes sangat profesional dan hasilnya melebihi ekspektasi. Hari pernikahan saya menjadi sangat berkesan berkat mereka.',
       'image': 'assets/images/customer1.jpg',
       'date': '15 Desember 2024',
     },
@@ -28,7 +28,7 @@ class TestimonialsSection extends StatelessWidget {
       'service': 'Hair Styling',
       'rating': 5,
       'review':
-          'Hair stylist di sini sangat kreatif dan memahami keinginan customer. Rambut saya selalu tampil cantik setelah treatment di Bella Beauty Salon.',
+          'Hair stylist di sini sangat kreatif dan memahami keinginan customer. Rambut saya selalu tampil cantik setelah treatment di Salon Beauty Vibes.',
       'image': 'assets/images/customer3.jpg',
       'date': '10 Desember 2024',
     },
@@ -42,6 +42,8 @@ class TestimonialsSection extends StatelessWidget {
       'date': '5 Januari 2025',
     },
   ];
+
+  TestimonialsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
