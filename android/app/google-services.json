@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "274562401957",
+    "project_id": "salonbeautyvibes-c32da",
+    "storage_bucket": "salonbeautyvibes-c32da.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274562401957:android:2f28439d50ebf263c4ef4c",
+        "android_client_info": {
+          "package_name": "com.example.salonbeautyvibes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe0flvNp_gqzPCFKf_5gr-3FzPMORs_mA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
