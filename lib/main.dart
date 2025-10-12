@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:salonbeautyvibes/firebase_options.dart';
 import 'core/theme/app_theme.dart';
 import 'core/routes/app_routes.dart';
@@ -8,8 +9,12 @@ import 'core/bindings/initial_binding.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Inisialisasi locale untuk format tanggal
+  await initializeDateFormatting('id_ID', null);
+
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(BellaBeautySalonApp());
+  runApp(const BellaBeautySalonApp());
 }
 
 class BellaBeautySalonApp extends StatelessWidget {

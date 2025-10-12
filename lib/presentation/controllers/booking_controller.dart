@@ -143,7 +143,12 @@ class BookingController extends GetxController {
 
   String getFormattedDate() {
     if (selectedDate == null) return '-';
-    return DateFormat('EEEE, dd MMMM yyyy', 'id_ID').format(selectedDate!);
+    try {
+      return DateFormat('EEEE, dd MMMM yyyy', 'id_ID').format(selectedDate!);
+    } catch (e) {
+      // Fallback ke format default jika locale tidak tersedia
+      return DateFormat('EEEE, dd MMMM yyyy').format(selectedDate!);
+    }
   }
 
   void _submitBooking() {

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppColors {
   // Primary Colors
-  static const Color primary = Color(0xFFE8B4CB); // Soft Pink
-  static const Color primaryDark = Color(0xFFD4869C);
-  static const Color secondary = Color(0xFFF5E6D3); // Beige
-  static const Color accent = Color(0xFFD4AF37); // Gold
+  static const Color primary = Color(0xFFBC1C62); // Elegan Rose
+  static const Color primaryDark = Color(0xFF8C1447); // Deep Rose
+  static const Color secondary = Color(0xFFFFC0CB); // Soft Pink
+  static const Color accent = Color(0xFFFFB6C1); // Light Pink
 
   // Neutral Colors
   static const Color background = Color(0xFFFFFBF8);
@@ -35,47 +34,60 @@ class AppColors {
 class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
-      primarySwatch: Colors.pink,
       primaryColor: AppColors.primary,
       scaffoldBackgroundColor: AppColors.background,
-      fontFamily: GoogleFonts.poppins().fontFamily,
+      fontFamily: 'Poppins',
 
       // App Bar Theme
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        iconTheme: const IconThemeData(color: AppColors.textPrimary),
-        titleTextStyle: GoogleFonts.playfairDisplay(
-          fontSize: 20,
+        iconTheme: IconThemeData(color: AppColors.textPrimary),
+        titleTextStyle: TextStyle(
+          fontFamily: 'PlayfairDisplay',
+          fontSize: 24,
           fontWeight: FontWeight.bold,
           color: AppColors.textPrimary,
         ),
       ),
 
       // Text Theme
-      textTheme: TextTheme(
-        headlineLarge: GoogleFonts.playfairDisplay(
-          fontSize: 32,
+      textTheme: const TextTheme(
+        // Heading Styles with PlayfairDisplay
+        displayLarge: TextStyle(
+          fontFamily: 'PlayfairDisplay',
+          fontSize: 48,
           fontWeight: FontWeight.bold,
           color: AppColors.textPrimary,
         ),
-        headlineMedium: GoogleFonts.playfairDisplay(
-          fontSize: 24,
+        displayMedium: TextStyle(
+          fontFamily: 'PlayfairDisplay',
+          fontSize: 36,
           fontWeight: FontWeight.bold,
           color: AppColors.textPrimary,
         ),
-        titleLarge: GoogleFonts.poppins(
-          fontSize: 18,
-          fontWeight: FontWeight.w600,
+        displaySmall: TextStyle(
+          fontFamily: 'PlayfairDisplay',
+          fontSize: 30,
+          fontWeight: FontWeight.bold,
           color: AppColors.textPrimary,
         ),
-        bodyLarge: GoogleFonts.poppins(
+
+        // Body Styles with Poppins
+        bodyLarge: TextStyle(
           fontSize: 16,
           color: AppColors.textPrimary,
+          height: 1.5,
         ),
-        bodyMedium: GoogleFonts.poppins(
+        bodyMedium: TextStyle(
           fontSize: 14,
+          color: AppColors.textPrimary,
+          height: 1.5,
+        ),
+        bodySmall: TextStyle(
+          fontSize: 12,
           color: AppColors.textSecondary,
+          height: 1.5,
         ),
       ),
 
@@ -89,12 +101,31 @@ class AppTheme {
             borderRadius: BorderRadius.circular(12),
           ),
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-          textStyle: GoogleFonts.poppins(
+          textStyle: const TextStyle(
+            fontFamily: 'Poppins',
             fontSize: 14,
             fontWeight: FontWeight.w600,
           ),
         ),
       ),
+
+      // Outlined Button Theme
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          foregroundColor: AppColors.primary,
+          side: const BorderSide(color: AppColors.primary),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+          textStyle: const TextStyle(
+            fontFamily: 'Poppins',
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+
       // Card Theme
       cardTheme: CardThemeData(
         elevation: 4,
@@ -106,17 +137,49 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColors.textLight),
+          borderSide: const BorderSide(color: AppColors.textLight),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppColors.primary, width: 2),
+          borderSide: const BorderSide(color: AppColors.primary, width: 2),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: const BorderSide(color: AppColors.textLight),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: const BorderSide(color: AppColors.error),
         ),
         filled: true,
         fillColor: Colors.white,
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 16,
           vertical: 16,
+        ),
+        labelStyle: const TextStyle(
+          fontFamily: 'Poppins',
+          color: AppColors.textSecondary,
+        ),
+        hintStyle: const TextStyle(
+          fontFamily: 'Poppins',
+          color: AppColors.textLight,
+        ),
+      ),
+
+      // Dialog Theme
+      dialogTheme: DialogThemeData(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        titleTextStyle: const TextStyle(
+          fontFamily: 'PlayfairDisplay',
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: AppColors.textPrimary,
+        ),
+        contentTextStyle: const TextStyle(
+          fontFamily: 'Poppins',
+          fontSize: 14,
+          color: AppColors.textSecondary,
         ),
       ),
     );
