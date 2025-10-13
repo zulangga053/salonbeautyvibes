@@ -12,7 +12,7 @@ class AppConstants {
   static const String phone = '085333242342';
   static const String instagram = '@salonbeautyvibes';
   static const String address =
-      'Jl. Sudirman No. 123, Jakarta Pusat, DKI Jakarta 10220';
+      'Sadia 1 Kelurahan Sadia\nKecamatan Munda\nKota Bima - NTB';
 
   // Business Hours
   static const String businessHours = 'Senin - Minggu: 09.00 - 21.00 WIB';
