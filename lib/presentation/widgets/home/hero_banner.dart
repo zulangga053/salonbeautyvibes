@@ -2,28 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../common/custom_button.dart';
-import '../../../core/theme/app_theme.dart';
+// import '../../../core/theme/app_theme.dart';
 
 class HeroBanner extends StatelessWidget {
   final List<Map<String, String>> bannerSlides = [
     {
-      'title': 'Tampil Cantik Setiap Hari',
-      'subtitle': 'Dengan perawatan premium dan layanan terpercaya',
+      'title': 'Treatment Glow Up',
+      'subtitle': 'Transformasi total untuk kepercayaan diri maksimal',
       'image': 'assets/images/hero1.jpg',
-      'cta': 'Reservasi Sekarang',
+      'cta': 'Lihat Paket',
     },
     {
       'title': 'Paket Wedding Spesial',
       'subtitle': 'Wujudkan impian menjadi pengantin tercantik',
       'image': 'assets/images/hero2.jpg',
-      'cta': 'Lihat Paket',
+      'cta': 'Reservasi Sekarang',
     },
-    {
-      'title': 'Treatment Glow Up',
-      'subtitle': 'Transformasi total untuk kepercayaan diri maksimal',
-      'image': 'assets/images/hero3.jpg',
-      'cta': 'Pelajari Lebih',
-    },
+    // {
+    //   'title': 'Treatment Glow Up',
+    //   'subtitle': 'Transformasi total untuk kepercayaan diri maksimal',
+    //   'image': 'assets/images/hero3.jpg',
+    //   'cta': 'Pelajari Lebih',
+    // },
   ];
 
   HeroBanner({super.key});
@@ -55,8 +55,11 @@ class HeroBanner extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(slide['image']!),
+          image: AssetImage(slide['image'] ?? 'assets/images/fallback.jpg'),
           fit: BoxFit.cover,
+          onError: (exception, stackTrace) {
+            print('Error loading image: $exception');
+          },
         ),
       ),
       child: Container(
@@ -98,16 +101,17 @@ class HeroBanner extends StatelessWidget {
                     const SizedBox(height: 32),
                     Row(
                       children: [
-                        CustomButton(
-                          text: slide['cta']!,
-                          onPressed: () => Get.toNamed('/reservasi'),
-                          backgroundColor: AppColors.primary,
-                        ),
-                        const SizedBox(width: 16),
+                        // CustomButton(
+                        //   text: slide['cta']!,
+                        //   onPressed: () => Get.toNamed('/reservasi'),
+                        //   backgroundColor: AppColors.primary,
+                        // ),
+                        // const SizedBox(width: 16),
                         CustomButton(
                           text: 'Lihat Layanan',
                           onPressed: () => Get.toNamed('/layanan'),
                           isOutlined: true,
+                          backgroundColor: const Color.fromARGB(0, 222, 12, 12),
                           borderColor: Colors.white,
                           textColor: Colors.white,
                         ),

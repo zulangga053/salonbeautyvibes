@@ -5,6 +5,8 @@ import '../../../core/constants/app_constants.dart';
 import '../../../core/routes/app_routes.dart';
 
 class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,13 +29,20 @@ class CustomAppBar extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  width: 40,
-                  height: 40,
+                  width: 80,
+                  height: 80,
                   decoration: BoxDecoration(
                     gradient: AppColors.primaryGradient,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: const Icon(Icons.spa, color: Colors.white, size: 24),
+                  child: Image.asset(
+                    'assets/images/logo.png',
+                    width: 24, // Sesuaikan ukuran lebar logo
+                    height: 24, // Sesuaikan ukuran tinggi logo
+                    // color: Colors
+                    //     .white, // Opsional: untuk memberikan efek warna seperti ikon
+                    fit: BoxFit.contain, // Sesuaikan cara logo ditampilkan
+                  ),
                 ),
                 const SizedBox(width: 12),
                 Column(
