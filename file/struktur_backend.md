@@ -235,4 +235,7 @@ class QRISPayment {
    - Tree shaking
    - Bundle optimization
    - Caching strategies
+
+4. - firebase hosting:channel:deploy live-preview #perintah untuk deploy 
+   - firebase deploy --only hosting #perintah deploy
 */
